@@ -14,6 +14,15 @@ function checkNumber(btn) {
     out("check number")
     let guess = inpGuess.value;
     out("Guess= " + guess)
+    if (guess > secretNumber) {
+        lblMessage.textContent = "Value is to high"
+    } else {
+        if (guess < secretNumber) {
+            lblMessage.textContent = "Value is to low"
+        } else {
+            lblMessage.textContent = "You guessed the number 🍟"
+        }
+    }
 }
 
 let secretNumber = 0;
