@@ -34,4 +34,20 @@ function doBeep() {
     beep(1500, freq, 1, 'sine',  )
 }
 
+function playTune(freq) {
+    out("Playing beep freq=" + freq)
+    beep(1500, freq, 1, 'sine',  )
+}
+
+const beepArr = [100, 200, 300, 10000, 400]
+
+function playJingle() {
+    beepArr.forEach(playTune)
+}
+
 pbBeep.addEventListener('click', doBeep)
+const pbJingle = document.querySelector(".pbJingle");
+out(pbJingle);
+pbJingle.addEventListener('click', playJingle)
+
+
